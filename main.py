@@ -116,7 +116,7 @@ def handle_quote(message, quote):
 
 @bot.message_handler(commands=['instant_publish'])
 def instant_publish(message):
-    if message.from_user.id == 1920379812:
+    if message.chat.id == MOD_ID:
         if len(message.text) == 16:
             bot.send_message(message.chat.id, 'Эта команда должна содержать аргумент!')
             return
